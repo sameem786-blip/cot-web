@@ -28,9 +28,6 @@ export default function TopNavbar() {
         <NavInner className="container flexSpaceCenter">
           <Link className="pointer flexNullCenter" to="home" smooth={true}>
             <LogoIcon />
-            <h1 style={{ marginLeft: "15px" }} className="font20 extraBold">
-              fanatic
-            </h1>
           </Link>
           <BurderWrapper className="pointer" onClick={() => toggleSidebar(!sidebarOpen)}>
             <BurgerIcon />
@@ -38,7 +35,7 @@ export default function TopNavbar() {
           <UlWrapper className="flexNullCenter">
             <li className="semiBold font15 pointer">
               <Link activeClass="active" style={{ padding: "10px 15px" }} to="home" spy={true} smooth={true} offset={-80}>
-                Home
+                About Us
               </Link>
             </li>
             <li className="semiBold font15 pointer">
@@ -53,21 +50,21 @@ export default function TopNavbar() {
             </li>
             <li className="semiBold font15 pointer">
               <Link activeClass="active" style={{ padding: "10px 15px" }} to="blog" spy={true} smooth={true} offset={-80}>
-                Blog
+                Testimonials
               </Link>
             </li>
             <li className="semiBold font15 pointer">
               <Link activeClass="active" style={{ padding: "10px 15px" }} to="pricing" spy={true} smooth={true} offset={-80}>
-                Pricing
+                Products
               </Link>
             </li>
             <li className="semiBold font15 pointer">
               <Link activeClass="active" style={{ padding: "10px 15px" }} to="contact" spy={true} smooth={true} offset={-80}>
-                Contact
+                Contact Us
               </Link>
             </li>
           </UlWrapper>
-          <UlWrapperRight className="flexNullCenter">
+          {/* <UlWrapperRight className="flexNullCenter">
             <li className="semiBold font15 pointer">
               <a href="/" style={{ padding: "10px 30px 10px 0" }}>
                 Log in
@@ -78,7 +75,7 @@ export default function TopNavbar() {
                 Get Started
               </a>
             </li>
-          </UlWrapperRight>
+          </UlWrapperRight> */}
         </NavInner>
       </Wrapper>
     </>

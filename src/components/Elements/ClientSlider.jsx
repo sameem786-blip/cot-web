@@ -44,7 +44,7 @@ export default function ClientSlider() {
     <div>
       <Slider {...settings}>
         <LogoWrapper className="flexCenter">
-          <ImgStyle src={ClientLogo01} alt="client logo" />
+          <ImgStyle src={ClientLogo02} alt="client logo" />
         </LogoWrapper>
         <LogoWrapper className="flexCenter">
           <ImgStyle src={ClientLogo02} alt="client logo" />
