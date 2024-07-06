@@ -88,9 +88,9 @@ export default function Blog() {
           <HeaderInfo>
             <h1 className="font40 extraBold">What They Say?</h1>
             <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            We take pride in turning ideas into reality and delivering exceptional results. 
               <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
+              Here’s what our clients have to say about our work:
             </p>
           </HeaderInfo>
           <TestimonialSlider />

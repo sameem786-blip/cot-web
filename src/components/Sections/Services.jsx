@@ -12,9 +12,9 @@ import AddImage4 from "../../assets/img/add/4.png";
 
 export default function Services() {
   return (
-    <Wrapper id="services">
-      <div className="lightBg" style={{ padding: "50px 0" }}>
-        <div className="container">
+    <Wrapper id="services" >
+      <div className="lightBg" style={{ padding: "0px 0" }}>
+        <div className="container" style={{width: '50%'}}>
           <ClientSlider />
         </div>
       </div>
@@ -23,9 +23,9 @@ export default function Services() {
           <HeaderInfo>
             <h1 className="font40 extraBold">Our Awesome Services</h1>
             <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            At COT, we offer a comprehensive range of IT solutions designed to propel your business forward in the digital age.
               <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
+              Our expertise spans across multiple domains, ensuring we meet your unique needs with precision and excellence.
             </p>
           </HeaderInfo>
           <ServiceBoxRow className="flex">
@@ -39,7 +39,7 @@ export default function Services() {
             <ServiceBoxWrapper>
               <ServiceBox
                 icon="monitor"
-                title="Web Design"
+                title="UI / UX"
                 subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
               />
             </ServiceBoxWrapper>
