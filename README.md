@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Startup - Free Next.js Startup Website Template
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Startup free, open-source, and premium-quality startup website template for Next.js comes with everything you need to launch a startup, business, or SaaS website, including all essential sections, components, and pages.
 
-## Available Scripts
+If you're looking for a high-quality and visually appealing, feature-rich Next.js Template for your next startup, SaaS, or business website, this is the perfect choice and starting point for you!
 
-In the project directory, you can run:
+### ✨ Key Features
+- Crafted for Startup and SaaS Business
+- Next.js and Tailwind CSS
+- All Essential Business Sections and Pages
+- High-quality and Clean Design
+- Dark and Light Version
+- TypeScript Support
+and Much More ...
 
-### `npm start`
+### 🙌 Detailed comparison between the Free and Pro versions of Startup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+| Feature             | Free | Pro |
+|---------------------|------------|----------|
+| Next.js Landing Page             | ✅ Yes      | ✅ Yes      |
+| All The Integrations - Auth, DB, Payments, Blog and many more ...             | ❌ No      | ✅ Yes |
+| Homepage Variations             | 1      | 2 |
+| Additional SaaS Pages and Components             | ❌ No      | ✅ Yes |
+| Functional Blog with Sanity       | ❌ No      | ✅ Yes | ✅ Yes |
+| Use with Commercial Projects            | ✅ Yes      | ✅ Yes      |
+| Lifetime Free Updates             | ✅ Yes      | ✅ Yes |
+| Email Support       | ❌ No         | ✅ Yes       |
+| Community Support         | ✅ Yes         | ✅ Yes       |
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+### [🔥 Get Startup Pro](https://nextjstemplates.com/templates/saas-starter-startup)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[![Startup Pro](https://raw.githubusercontent.com/NextJSTemplates/startup-nextjs/main/startup-pro.webp)](https://nextjstemplates.com/templates/saas-starter-startup)
 
-### `npm run build`
+Startup Pro - Expertly crafted for fully-functional, high-performing SaaS startup websites. Comes with with Authentication, Database, Blog, and all the essential integrations necessary for SaaS business sites.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### [🚀 View Free Demo](https://startup.nextjstemplates.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### [🚀 View Pro Demo](https://startup-pro.nextjstemplates.com/)
 
-### `npm run eject`
+### [📦 Download](https://nextjstemplates.com/templates/startup)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### [🔥 Get Pro](https://nextjstemplates.com/templates/saas-starter-startup)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### [🔌 Documentation](https://nextjstemplates.com/docs)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### ⚡ Deploy Now
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FNextJSTemplates%2Fstartup-nextjs)
 
-## Learn More
+[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/NextJSTemplates/startup-nextjs)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 📄 License
+Startup is 100% free and open-source, feel free to use with your personal and commercial projects.
 
-### Code Splitting
+### 💜 Support
+If you like the template, please star this repository to inspire the team to create more stuff like this and reach more users like you!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### ✨ Explore and Download - Free [Next.js Templates](https://nextjstemplates.com)

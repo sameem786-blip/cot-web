@@ -1,11 +1,54 @@
-import React from "react";
+import React , {useState} from "react";
 import styled from "styled-components";
+import nodemailer from 'nodemailer';
 // Assets
 import ContactImg1 from "../../assets/img/cot-contact2.jpg";
 import ContactImg2 from "../../assets/img/cot-contact3.jpg";
 import ContactImg3 from "../../assets/img/cot-contact1.jpg";
 
 export default function Contact() {
+  const [name, setName] = useState('');
+const [email, setEmail] = useState('');
+const [subject, setSubject] = useState('');
+const [message, setMessage] = useState('');
+
+
+
+
+const sendMessage  = async (name,email,subject,message) => {
+  if(name === '' || email === '' || subject === '' || message === ''){
+    alert("Please Input all fields")
+    return;
+  }
+
+  try {
+    
+
+let transporter = await nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    service: "gmail",
+    port: 587,
+    auth: {
+        // TODO: replace `user` and `pass` values from <https://forwardemail.net>
+        user: process.env.SMTP_EMAIL,
+        pass: process.env.SMTP_PASSWORD,
+    },
+})
+
+const info = await transporter.sendMail({
+    from: `sameembbs@gmail.com <${process.env.SMTP_EMAIL}>`, // sender address
+    to: "sameembbs@gmail.com", // list of receivers
+    subject: `COT Request ${subject}`, // Subject line
+    html: `<html></html>`, // html body
+    cc: ''
+});
+
+return "Email Sent Sucessfully"
+} catch (err) {
+    console.log(err)
+}
+
+}
   return (
     <Wrapper id="contact">
       <div className="lightBg">
@@ -20,17 +63,47 @@ export default function Contact() {
           </HeaderInfo>
           <div className="row" style={{ paddingBottom: "30px" }}>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-              <Form>
+            <Form>
                 <label className="font13">First name:</label>
-                <input type="text" id="fname" name="fname" className="font20 extraBold" />
+                <input 
+                  type="text" 
+                  id="fname" 
+                  name="fname" 
+                  className="font20 extraBold"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)} 
+                />
                 <label className="font13">Email:</label>
-                <input type="text" id="email" name="email" className="font20 extraBold" />
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  className="font20 extraBold" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
                 <label className="font13">Subject:</label>
-                <input type="text" id="subject" name="subject" className="font20 extraBold" />
-                <textarea rows="4" cols="50" type="text" id="message" name="message" className="font20 extraBold" />
+                <input 
+                  type="text" 
+                  id="subject" 
+                  name="subject" 
+                  className="font20 extraBold" 
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
+                />
+                <label className="font13">Message:</label>
+                <textarea 
+                  rows="4" 
+                  cols="50" 
+                  id="message" 
+                  name="message" 
+                  className="font20 extraBold" 
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                />
               </Form>
               <SumbitWrapper className="flex">
-                <ButtonInput type="submit" value="Send Message" className="pointer animate radius8" style={{ maxWidth: "220px" }} />
+                <ButtonInput type="submit" value="Send Message" className="pointer animate radius8" style={{ maxWidth: "220px" }} onClick={ () => {sendMessage(name, email, subject, message)}}/>
               </SumbitWrapper>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 flex">
