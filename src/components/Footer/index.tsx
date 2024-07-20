@@ -12,7 +12,7 @@ const Footer = () => {
               <div className="mb-12 max-w-[360px] lg:mb-16">
                 <Link href="/" className="mb-8 inline-block">
                   <Image
-                    src="/images/logo/logo-2.svg"
+                    src="/images/logo/cot_light.png"
                     alt="logo"
                     className="w-full dark:hidden"
                     width={140}
@@ -27,12 +27,11 @@ const Footer = () => {
                   />
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer lobortis.
+                Crafting Tomorrow’s Digital Landscape.
                 </p>
                 <div className="flex items-center">
                   <a
-                    href="/"
+                    href="https://www.facebook.com/ComputingOfTomorrow/"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -51,7 +50,7 @@ const Footer = () => {
                       />
                     </svg>
                   </a>
-                  <a
+                  {/* <a
                     href="/"
                     aria-label="social-link"
                     target="_blank"
@@ -72,9 +71,9 @@ const Footer = () => {
                         fill="currentColor"
                       />
                     </svg>
-                  </a>
+                  </a> */}
                   <a
-                    href="/"
+                    href="https://www.instagram.com/cot_pak/"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -82,15 +81,15 @@ const Footer = () => {
                   >
                     <svg
                       width="18"
-                      height="14"
-                      viewBox="0 0 18 14"
+                      height="18"
+                      viewBox="0 0 24 24"
                       className="fill-current"
                     >
-                      <path d="M17.5058 2.07119C17.3068 1.2488 16.7099 0.609173 15.9423 0.395963C14.5778 7.26191e-08 9.0627 0 9.0627 0C9.0627 0 3.54766 7.26191e-08 2.18311 0.395963C1.41555 0.609173 0.818561 1.2488 0.619565 2.07119C0.25 3.56366 0.25 6.60953 0.25 6.60953C0.25 6.60953 0.25 9.68585 0.619565 11.1479C0.818561 11.9703 1.41555 12.6099 2.18311 12.8231C3.54766 13.2191 9.0627 13.2191 9.0627 13.2191C9.0627 13.2191 14.5778 13.2191 15.9423 12.8231C16.7099 12.6099 17.3068 11.9703 17.5058 11.1479C17.8754 9.68585 17.8754 6.60953 17.8754 6.60953C17.8754 6.60953 17.8754 3.56366 17.5058 2.07119ZM7.30016 9.44218V3.77687L11.8771 6.60953L7.30016 9.44218Z" />
+                      <path d="M12 2.163c3.204 0 3.584.012 4.849.07 1.259.058 2.123.272 2.627.57.601.346 1.036.83 1.495 1.495.298.504.512 1.368.57 2.627.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.058 1.259-.272 2.123-.57 2.627-.346.601-.83 1.036-1.495 1.495-.504.298-1.368.512-2.627.57-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.259-.058-2.123-.272-2.627-.57-.601-.346-1.036-.83-1.495-1.495-.298-.504-.512-1.368-.57-2.627-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.058-1.259.272-2.123.57-2.627.346-.601.83-1.036 1.495-1.495.504-.298 1.368-.512 2.627-.57C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.073 5.773.132 4.61.355 3.603.847 2.571 1.35 1.77 2.15 1.267 3.182.775 4.19.552 5.353.493 6.632.433 7.912.42 8.322.42 12s.013 4.088.073 5.368c.059 1.279.282 2.442.774 3.45.503 1.032 1.303 1.833 2.335 2.335 1.008.492 2.171.715 3.45.774 1.28.06 1.69.073 5.368.073s4.088-.013 5.368-.073c1.279-.059 2.442-.282 3.45-.774 1.032-.503 1.833-1.303 2.335-2.335.492-1.008.715-2.171.774-3.45.06-1.28.073-1.69.073-5.368s-.013-4.088-.073-5.368c-.059-1.279-.282-2.442-.774-3.45-.503-1.032-1.303-1.833-2.335-2.335C19.39.355 18.227.132 16.948.073 15.668.013 15.259 0 12 0zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.1c-2.172 0-3.938-1.766-3.938-3.938s1.766-3.938 3.938-3.938 3.938 1.766 3.938 3.938-1.766 3.938-3.938 3.938zm6.406-11.846c-.796 0-1.44-.645-1.44-1.44s.645-1.44 1.44-1.44 1.44.645 1.44 1.44-.645 1.44-1.44 1.44z"/>
                     </svg>
                   </a>
                   <a
-                    href="/"
+                    href="https://www.linkedin.com/company/100001074/"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -120,7 +119,7 @@ const Footer = () => {
                       href="/blog"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Blog
+                      Projects
                     </Link>
                   </li>
                   <li>
@@ -204,7 +203,7 @@ const Footer = () => {
                       href="/about"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      About
+                      About Us
                     </Link>
                   </li>
                 </ul>
@@ -213,28 +212,6 @@ const Footer = () => {
           </div>
 
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
-          <div className="py-8">
-            <p className="text-center text-base text-body-color dark:text-white">
-              Template by{" "}
-              <a
-                href="http://uideck.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary"
-              >
-                UIdeck
-              </a>{" "}
-              and{" "}
-              <a
-                href="https://nextjstemplates.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary"
-              >
-                Next.js Templates
-              </a>
-            </p>
-          </div>
         </div>
         <div className="absolute right-0 top-14 z-[-1]">
           <svg
