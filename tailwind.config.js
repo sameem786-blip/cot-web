@@ -35,6 +35,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        customlight: '#b35da4',
         current: "currentColor",
         transparent: "transparent",
         white: "#FFFFFF",
