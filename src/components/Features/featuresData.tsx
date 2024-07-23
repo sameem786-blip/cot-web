@@ -11,7 +11,7 @@ const featuresData: Feature[] = [
   {
     id: 1,
     icon: (
-      <Image src={UIUXIcon} alt="UI/UX Icon" height={60} width={60}></Image>
+      <Image src={UIUXIcon} alt="UI/UX Icon" height={60} width={60} ></Image>
     ),
     title: "UI / UX",
     service_a: "Research & Analysis",
@@ -24,7 +24,7 @@ const featuresData: Feature[] = [
   {
     id: 1,
     icon: (
-      <Image src={WebIcon} alt="UI/UX Icon" height={60} width={60}></Image>
+      <Image src={WebIcon} alt="UI/UX Icon" height={60} width={60} ></Image>
     ),
     title: "Web Development",
     service_a: "Website",
@@ -39,7 +39,7 @@ const featuresData: Feature[] = [
   {
     id: 1,
     icon: (
-      <Image src={MobileIcon} alt="UI/UX Icon" height={60} width={60}></Image>
+      <Image src={MobileIcon} alt="UI/UX Icon" height={60} width={60} ></Image>
     ),
     title: "Mobile App Development",
     service_a: "IOS Application",
@@ -51,7 +51,7 @@ const featuresData: Feature[] = [
   {
     id: 1,
     icon: (
-      <Image src={BlockchainIcon} alt="UI/UX Icon" height={60} width={60}></Image>
+      <Image src={BlockchainIcon} alt="UI/UX Icon" height={60} width={60} ></Image>
     ),
     title: "Blockchain Development",
     service_a: "Consultation",
@@ -66,7 +66,7 @@ const featuresData: Feature[] = [
   {
     id: 1,
     icon: (
-      <Image src={CloudIcon} alt="UI/UX Icon" height={60} width={60}></Image>
+      <Image src={CloudIcon} alt="UI/UX Icon" height={60} width={60} ></Image>
     ),
     title: "Cloud Solutions",
     service_a: "Infrastructure Service",
@@ -81,7 +81,7 @@ const featuresData: Feature[] = [
   {
     id: 1,
     icon: (
-      <Image src={DmIcon} alt="UI/UX Icon" height={60} width={60}></Image>
+      <Image src={DmIcon} alt="UI/UX Icon" height={60} width={60} ></Image>
     ),
     title: "Digital Marketting",
     service_a: "PPC Advertising",
