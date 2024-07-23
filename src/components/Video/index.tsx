@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
+import Contact from "../Contact";
 
 import ModalVideo from "react-modal-video";
 
@@ -11,7 +12,7 @@ const Video = () => {
 
   return (
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
-      <div className="container">
+      {/* <div className="container">
         <SectionTitle
           title="We are ready to help"
           paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
@@ -56,7 +57,9 @@ const Video = () => {
         isOpen={isOpen}
         videoId="L61p2uyiMSo"
         onClose={() => setOpen(false)}
-      />
+      /> */}
+
+      <Contact />
 
       <div className="absolute bottom-0 left-0 right-0 z-[-1] h-full w-full bg-[url(/images/video/shape.svg)] bg-cover bg-center bg-no-repeat"></div>
     </section>
