@@ -83,13 +83,13 @@ const featuresData: Feature[] = [
     icon: (
       <Image src={DmIcon} alt="UI/UX Icon" height={60} width={60} ></Image>
     ),
-    title: "Digital Marketting",
-    service_a: "PPC Advertising",
-    service_b: "Social Media MArketing",
-    service_c: "Analytics & Reports",
-    service_d: "Strategy Formation",
-    service_e: "SEO",
-    service_f: "CRO",
+    title: "Quality Assurance",
+    service_a: "Manual Testing",
+    service_b: "Automated Testingg",
+    service_c: "Performance Testing",
+    service_d: "Security Testing",
+    service_e: "Usability Testing",
+    service_f: "QA Consulting and Audits",
     paragraph:
       "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
   },
