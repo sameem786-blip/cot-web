@@ -13,7 +13,7 @@ const blogData: Blog[] = [
       image: "/images/testimonials/auth-02.png",
       designation: "CEO @ EscrowBridge.pk",
     },
-    tags: ["Blockchain Web App"],
+    tags: ["Blockchain Web Application"],
     publishDate: "2025",
   },
   {
