@@ -85,7 +85,7 @@ const featuresData: Feature[] = [
     ),
     title: "Quality Assurance",
     service_a: "Manual Testing",
-    service_b: "Automated Testingg",
+    service_b: "Automated Testing",
     service_c: "Performance Testing",
     service_d: "Security Testing",
     service_e: "Usability Testing",
