@@ -13,7 +13,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Computing Of Tomorrow",
-  description: "Crafting Tomorrow’s Digital Landscape",
+  description: "Crafting Tomorrow`s Digital Landscape",
   // other metadata
 };
 
