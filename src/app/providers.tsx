@@ -8,7 +8,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
   const { theme, setTheme } = useTheme();
   setTheme("dark")
   return (
-    <ThemeProvider attribute="class" enableSystem={false} defaultTheme="dark">
+    <ThemeProvider attribute="class" enableSystem={true} defaultTheme="dark">
       {children}
     </ThemeProvider>
   );
