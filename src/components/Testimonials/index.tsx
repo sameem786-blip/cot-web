@@ -5,15 +5,6 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Zainuddin",
-    designation: "Founder @VerkPro",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-01.png",
-    star: 5,
-  },
-  {
-    id: 2,
     name: "Bilal Khan",
     designation: "Founder @EscrowBridge.pk",
     content:
@@ -22,12 +13,12 @@ const testimonialData: Testimonial[] = [
     star: 5,
   },
   {
-    id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
+    id: 2,
+    name: "Zainuddin",
+    designation: "Founder @VerkPro",
     content:
       "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-03.png",
+    image: "/images/testimonials/auth-01.png",
     star: 5,
   },
 ];
@@ -42,7 +33,7 @@ const Testimonials = () => {
           center
         />
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-2">
           {testimonialData.map((testimonial) => (
             <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
           ))}
