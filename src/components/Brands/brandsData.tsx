@@ -5,15 +5,15 @@ const brandsData: Brand[] = [
     id: 1,
     name: "EscrowBridge",
     href: "http://escrowbridge.pk/",
-    image: "/images/brands/uideck.svg",
-    imageLight: "/images/brands/uideck-light.svg",
+    image: "/images/brands/escrowbridge.png",
+    imageLight: "/images/brands/escrowbridge.png",
   },
   {
     id: 2,
     name: "VerkPro",
     href: "https://verkpro.com/",
-    image: "/images/brands/tailgrids.svg",
-    imageLight: "/images/brands/tailgrids-light.svg",
+    image: "/images/brands/verkpro.png",
+    imageLight: "/images/brands/verkpro.png",
   },
 ];
 

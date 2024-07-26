@@ -7,7 +7,7 @@ const blogData: Blog[] = [
     title: "Escrow Bridge",
     paragraph:
       "A Blockchain web app built for introducing escrow payments to the Pakistani E-commerce marketplace.",
-    image: "/images/blog/blog-01.jpg",
+    image: "/images/blog/project1.jpg",
     author: {
       name: "Bilal Khan",
       image: "/images/testimonials/auth-02.png",
@@ -22,7 +22,7 @@ const blogData: Blog[] = [
     title: "VerkPro",
     paragraph:
       "A Human Resource management platform that advances your job search and lands you your dream job.",
-    image: "/images/blog/blog-02.jpg",
+    image: "/images/blog/project2.jpg",
     author: {
       name: "ZainUddin",
       image: "/images/blog/author-02.png",
