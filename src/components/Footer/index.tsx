@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import FooterImg from '../../../public/images/footer.png'
+import FooterImg from "../../../public/images/footer.png";
 
 const Footer = () => {
   return (
@@ -28,7 +28,7 @@ const Footer = () => {
                   />
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                Crafting Tomorrow’s Digital Landscape.
+                  Crafting Tomorrow’s Digital Landscape.
                 </p>
                 <div className="flex items-center">
                   <a
@@ -64,7 +64,7 @@ const Footer = () => {
                       viewBox="0 0 24 24"
                       className="fill-current"
                     >
-                      <path d="M12 2.163c3.204 0 3.584.012 4.849.07 1.259.058 2.123.272 2.627.57.601.346 1.036.83 1.495 1.495.298.504.512 1.368.57 2.627.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.058 1.259-.272 2.123-.57 2.627-.346.601-.83 1.036-1.495 1.495-.504.298-1.368.512-2.627.57-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.259-.058-2.123-.272-2.627-.57-.601-.346-1.036-.83-1.495-1.495-.298-.504-.512-1.368-.57-2.627-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.058-1.259.272-2.123.57-2.627.346-.601.83-1.036 1.495-1.495.504-.298 1.368-.512 2.627-.57C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.073 5.773.132 4.61.355 3.603.847 2.571 1.35 1.77 2.15 1.267 3.182.775 4.19.552 5.353.493 6.632.433 7.912.42 8.322.42 12s.013 4.088.073 5.368c.059 1.279.282 2.442.774 3.45.503 1.032 1.303 1.833 2.335 2.335 1.008.492 2.171.715 3.45.774 1.28.06 1.69.073 5.368.073s4.088-.013 5.368-.073c1.279-.059 2.442-.282 3.45-.774 1.032-.503 1.833-1.303 2.335-2.335.492-1.008.715-2.171.774-3.45.06-1.28.073-1.69.073-5.368s-.013-4.088-.073-5.368c-.059-1.279-.282-2.442-.774-3.45-.503-1.032-1.303-1.833-2.335-2.335C19.39.355 18.227.132 16.948.073 15.668.013 15.259 0 12 0zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.1c-2.172 0-3.938-1.766-3.938-3.938s1.766-3.938 3.938-3.938 3.938 1.766 3.938 3.938-1.766 3.938-3.938 3.938zm6.406-11.846c-.796 0-1.44-.645-1.44-1.44s.645-1.44 1.44-1.44 1.44.645 1.44 1.44-.645 1.44-1.44 1.44z"/>
+                      <path d="M12 2.163c3.204 0 3.584.012 4.849.07 1.259.058 2.123.272 2.627.57.601.346 1.036.83 1.495 1.495.298.504.512 1.368.57 2.627.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.058 1.259-.272 2.123-.57 2.627-.346.601-.83 1.036-1.495 1.495-.504.298-1.368.512-2.627.57-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.259-.058-2.123-.272-2.627-.57-.601-.346-1.036-.83-1.495-1.495-.298-.504-.512-1.368-.57-2.627-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.058-1.259.272-2.123.57-2.627.346-.601.83-1.036 1.495-1.495.504-.298 1.368-.512 2.627-.57C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.073 5.773.132 4.61.355 3.603.847 2.571 1.35 1.77 2.15 1.267 3.182.775 4.19.552 5.353.493 6.632.433 7.912.42 8.322.42 12s.013 4.088.073 5.368c.059 1.279.282 2.442.774 3.45.503 1.032 1.303 1.833 2.335 2.335 1.008.492 2.171.715 3.45.774 1.28.06 1.69.073 5.368.073s4.088-.013 5.368-.073c1.279-.059 2.442-.282 3.45-.774 1.032-.503 1.833-1.303 2.335-2.335.492-1.008.715-2.171.774-3.45.06-1.28.073-1.69.073-5.368s-.013-4.088-.073-5.368c-.059-1.279-.282-2.442-.774-3.45-.503-1.032-1.303-1.833-2.335-2.335C19.39.355 18.227.132 16.948.073 15.668.013 15.259 0 12 0zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.1c-2.172 0-3.938-1.766-3.938-3.938s1.766-3.938 3.938-3.938 3.938 1.766 3.938 3.938-1.766 3.938-3.938 3.938zm6.406-11.846c-.796 0-1.44-.645-1.44-1.44s.645-1.44 1.44-1.44 1.44.645 1.44 1.44-.645 1.44-1.44 1.44z" />
                     </svg>
                   </a>
                   {/* <a
@@ -147,7 +147,15 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link
-                      href="/blog"
+                      href="/about"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    >
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/projects"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Projects
@@ -155,18 +163,10 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/"
+                      href="/contact"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Pricing
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/about"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      About
+                      Contact
                     </Link>
                   </li>
                 </ul>
@@ -179,27 +179,32 @@ const Footer = () => {
                   Talent
                 </h2>
                 <ul>
-                <p className="mb-4 text-base font-medium text-body-color">
-                COT is always on the lookout for talent, submit your resume/CV for us to review.
-              </p>
-              <form>
-                <div className="-mx-4 flex">
-                  
-                <div className="px-4">
-                    <div className="">
-                    <button type="submit" className="rounded-sm bg-black px-4 py-2 text-base font-medium text-white shadow-submit duration-300 hover:bg-black/90 dark:shadow-submit-dark dark:bg-white/10 dark:hover:bg-white/5" >
-                      Upload
-                    </button>
+                  <p className="mb-4 text-base font-medium text-body-color">
+                    COT is always on the lookout for talent, submit your
+                    resume/CV for us to review.
+                  </p>
+                  <form>
+                    <div className="-mx-4 flex">
+                      <div className="px-4">
+                        <div className="">
+                          <button
+                            type="submit"
+                            className="rounded-sm bg-black px-4 py-2 text-base font-medium text-white shadow-submit duration-300 hover:bg-black/90 dark:bg-white/10 dark:shadow-submit-dark dark:hover:bg-white/5"
+                          >
+                            Upload
+                          </button>
+                        </div>
+                      </div>
+                      <div className="w-full px-4">
+                        <button
+                          type="submit"
+                          className="rounded-sm bg-primary px-4 py-2 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
+                        >
+                          Submit
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                  <div className="w-full px-4">
-                    <button type="submit" className="rounded-sm bg-primary px-4 py-2 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark" >
-                      Submit
-                    </button>
-                  </div>
-                  
-                </div>
-              </form>
+                  </form>
                   {/* <li>
                     <Link
                       href="/"
@@ -219,8 +224,6 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            
-            
 
             {/* <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               
