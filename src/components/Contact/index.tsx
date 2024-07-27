@@ -26,7 +26,7 @@ const Contact = () => {
     const { name, email, message } = data;
   
     try {
-      const response = await axios.post('/api/route', {
+      const response = await axios.post('/api/sendEmail', {
         name,
         email,
         message,
