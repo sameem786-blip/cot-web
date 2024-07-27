@@ -3,12 +3,11 @@
 import { ThemeProvider } from "next-themes";
 import { useTheme } from "next-themes";
 
-
 export function Providers({ children }: { children: React.ReactNode }) {
   const { theme, setTheme } = useTheme();
-  setTheme("dark")
+  setTheme("dark");
   return (
-    <ThemeProvider attribute="class" enableSystem={true} defaultTheme="dark">
+    <ThemeProvider attribute="class" defaultTheme="dark">
       {children}
     </ThemeProvider>
   );

@@ -14,7 +14,7 @@ const ContactPage = () => {
     <>
       <Breadcrumb
         pageName="Contact Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        description="For any questions or to learn more about how Computing of Tomorrow (COT) can help your business, please contact us. We're ready to assist with your digital transformation needs."
       />
 
       <Contact />

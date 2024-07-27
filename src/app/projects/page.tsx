@@ -14,8 +14,8 @@ const Blog = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Blog Grid"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        pageName="Projects"
+        description="Explore the projects at Computing of Tomorrow (COT), where we turn innovative ideas into reality. Discover how our tailored solutions drive digital transformation and business growth for our clients."
       />
 
       <section className="pb-[120px] pt-[120px]">
@@ -50,35 +50,35 @@ const Blog = () => {
                     1
                   </a>
                 </li>
-                <li className="mx-1">
+                {/* <li className="mx-1">
                   <a
                     href="#0"
                     className="flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-body-color transition hover:bg-primary hover:bg-opacity-100 hover:text-white"
                   >
                     2
                   </a>
-                </li>
-                <li className="mx-1">
+                </li> */}
+                {/* <li className="mx-1">
                   <a
                     href="#0"
                     className="flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-body-color transition hover:bg-primary hover:bg-opacity-100 hover:text-white"
                   >
                     3
                   </a>
-                </li>
-                <li className="mx-1">
+                </li> */}
+                {/* <li className="mx-1">
                   <span className="flex h-9 min-w-[36px] cursor-not-allowed items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-body-color">
                     ...
                   </span>
-                </li>
-                <li className="mx-1">
+                </li> */}
+                {/* <li className="mx-1">
                   <a
                     href="#0"
                     className="flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-body-color transition hover:bg-primary hover:bg-opacity-100 hover:text-white"
                   >
                     12
                   </a>
-                </li>
+                </li> */}
                 <li className="mx-1">
                   <a
                     href="#0"

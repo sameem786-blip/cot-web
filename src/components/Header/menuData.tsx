@@ -16,7 +16,7 @@ const menuData: Menu[] = [
   {
     id: 33,
     title: "Projects",
-    path: "/blog",
+    path: "/projects",
     newTab: false,
   },
   {
@@ -25,6 +25,5 @@ const menuData: Menu[] = [
     path: "/contact",
     newTab: false,
   },
-  
 ];
 export default menuData;
