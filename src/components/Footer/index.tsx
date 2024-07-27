@@ -51,6 +51,22 @@ const Footer = () => {
                       />
                     </svg>
                   </a>
+                  <a
+                    href="https://www.facebook.com/ComputingOfTomorrow/"
+                    aria-label="social-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      className="fill-current"
+                    >
+                      <path d="M12 2.163c3.204 0 3.584.012 4.849.07 1.259.058 2.123.272 2.627.57.601.346 1.036.83 1.495 1.495.298.504.512 1.368.57 2.627.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.058 1.259-.272 2.123-.57 2.627-.346.601-.83 1.036-1.495 1.495-.504.298-1.368.512-2.627.57-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.259-.058-2.123-.272-2.627-.57-.601-.346-1.036-.83-1.495-1.495-.298-.504-.512-1.368-.57-2.627-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.058-1.259.272-2.123.57-2.627.346-.601.83-1.036 1.495-1.495.504-.298 1.368-.512 2.627-.57C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.073 5.773.132 4.61.355 3.603.847 2.571 1.35 1.77 2.15 1.267 3.182.775 4.19.552 5.353.493 6.632.433 7.912.42 8.322.42 12s.013 4.088.073 5.368c.059 1.279.282 2.442.774 3.45.503 1.032 1.303 1.833 2.335 2.335 1.008.492 2.171.715 3.45.774 1.28.06 1.69.073 5.368.073s4.088-.013 5.368-.073c1.279-.059 2.442-.282 3.45-.774 1.032-.503 1.833-1.303 2.335-2.335.492-1.008.715-2.171.774-3.45.06-1.28.073-1.69.073-5.368s-.013-4.088-.073-5.368c-.059-1.279-.282-2.442-.774-3.45-.503-1.032-1.303-1.833-2.335-2.335C19.39.355 18.227.132 16.948.073 15.668.013 15.259 0 12 0zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.1c-2.172 0-3.938-1.766-3.938-3.938s1.766-3.938 3.938-3.938 3.938 1.766 3.938 3.938-1.766 3.938-3.938 3.938zm6.406-11.846c-.796 0-1.44-.645-1.44-1.44s.645-1.44 1.44-1.44 1.44.645 1.44 1.44-.645 1.44-1.44 1.44z"/>
+                    </svg>
+                  </a>
                   {/* <a
                     href="/"
                     aria-label="social-link"
@@ -81,28 +97,42 @@ const Footer = () => {
                     className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      className="fill-current"
-                    >
-                      <path d="M12 2.163c3.204 0 3.584.012 4.849.07 1.259.058 2.123.272 2.627.57.601.346 1.036.83 1.495 1.495.298.504.512 1.368.57 2.627.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.058 1.259-.272 2.123-.57 2.627-.346.601-.83 1.036-1.495 1.495-.504.298-1.368.512-2.627.57-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.259-.058-2.123-.272-2.627-.57-.601-.346-1.036-.83-1.495-1.495-.298-.504-.512-1.368-.57-2.627-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.058-1.259.272-2.123.57-2.627.346-.601.83-1.036 1.495-1.495.504-.298 1.368-.512 2.627-.57C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.073 5.773.132 4.61.355 3.603.847 2.571 1.35 1.77 2.15 1.267 3.182.775 4.19.552 5.353.493 6.632.433 7.912.42 8.322.42 12s.013 4.088.073 5.368c.059 1.279.282 2.442.774 3.45.503 1.032 1.303 1.833 2.335 2.335 1.008.492 2.171.715 3.45.774 1.28.06 1.69.073 5.368.073s4.088-.013 5.368-.073c1.279-.059 2.442-.282 3.45-.774 1.032-.503 1.833-1.303 2.335-2.335.492-1.008.715-2.171.774-3.45.06-1.28.073-1.69.073-5.368s-.013-4.088-.073-5.368c-.059-1.279-.282-2.442-.774-3.45-.503-1.032-1.303-1.833-2.335-2.335C19.39.355 18.227.132 16.948.073 15.668.013 15.259 0 12 0zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.1c-2.172 0-3.938-1.766-3.938-3.938s1.766-3.938 3.938-3.938 3.938 1.766 3.938 3.938-1.766 3.938-3.938 3.938zm6.406-11.846c-.796 0-1.44-.645-1.44-1.44s.645-1.44 1.44-1.44 1.44.645 1.44 1.44-.645 1.44-1.44 1.44z"/>
-                    </svg>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/company/100001074/"
-                    aria-label="social-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                  >
-                    <svg
                       width="17"
                       height="16"
                       viewBox="0 0 17 16"
                       className="fill-current"
                     >
                       <path d="M15.2196 0H1.99991C1.37516 0 0.875366 0.497491 0.875366 1.11936V14.3029C0.875366 14.8999 1.37516 15.4222 1.99991 15.4222H15.1696C15.7943 15.4222 16.2941 14.9247 16.2941 14.3029V1.09448C16.3441 0.497491 15.8443 0 15.2196 0ZM5.44852 13.1089H3.17444V5.7709H5.44852V13.1089ZM4.29899 4.75104C3.54929 4.75104 2.97452 4.15405 2.97452 3.43269C2.97452 2.71133 3.57428 2.11434 4.29899 2.11434C5.02369 2.11434 5.62345 2.71133 5.62345 3.43269C5.62345 4.15405 5.07367 4.75104 4.29899 4.75104ZM14.07 13.1089H11.796V9.55183C11.796 8.7061 11.771 7.58674 10.5964 7.58674C9.39693 7.58674 9.222 8.53198 9.222 9.47721V13.1089H6.94792V5.7709H9.17202V6.79076H9.19701C9.52188 6.19377 10.2466 5.59678 11.3711 5.59678C13.6952 5.59678 14.12 7.08925 14.12 9.12897V13.1089H14.07Z" />
+                    </svg>
+                  </a>
+                  <a
+                    href="mailto:info@cot.com.pk"
+                    aria-label="social-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2 6C2 4.89543 2.89543 4 4 4H20C21.1046 4 22 4.89543 22 6V18C22 19.1046 21.1046 20 20 20H4C2.89543 20 2 19.1046 2 18V6Z"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M22 6L12 13L2 6"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
                     </svg>
                   </a>
                 </div>
@@ -143,20 +173,33 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
+            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-4/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Mail
+                  Talent
                 </h2>
                 <ul>
-                  <li>
-                    <Link
-                      href="mailto:info@cot.com.pk"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      info@cot.com.pk
-                    </Link>
-                  </li>
+                <p className="mb-4 text-base font-medium text-body-color">
+                COT is always on the lookout for talent, submit your resume/CV for us to review.
+              </p>
+              <form>
+                <div className="-mx-4 flex">
+                  
+                <div className="px-4">
+                    <div className="">
+                    <button type="submit" className="rounded-sm bg-black px-4 py-2 text-base font-medium text-white shadow-submit duration-300 hover:bg-black/90 dark:shadow-submit-dark dark:bg-white/10 dark:hover:bg-white/5" >
+                      Upload
+                    </button>
+                    </div>
+                  </div>
+                  <div className="w-full px-4">
+                    <button type="submit" className="rounded-sm bg-primary px-4 py-2 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark" >
+                      Submit
+                    </button>
+                  </div>
+                  
+                </div>
+              </form>
                   {/* <li>
                     <Link
                       href="/"
@@ -176,11 +219,13 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
+            
+            
 
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
+            {/* <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               
                 <Image src={FooterImg} alt="Footer Image" className="w-1/2"></Image>
-            </div>
+            </div> */}
           </div>
 
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
