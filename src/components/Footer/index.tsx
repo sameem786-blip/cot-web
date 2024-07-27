@@ -1,9 +1,42 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import React, { useState, useEffect } from 'react';
 import FooterImg from "../../../public/images/footer.png";
+import axios from 'axios';
 
 const Footer = () => {
+  const [formData, setFormData] = useState({ file: ''});
+
+  const handleChange = (event: any) => {
+    setFormData({ ...formData, [event.target.file]: event.target.value });
+  };
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+
+    // Call the sendData function with the current formData
+    sendData(formData);
+
+    // Optional: clear the form
+    setFormData({ file: ''});
+  };
+
+  async function sendData(data: { file: string;}) {
+    // This function will be called to send the data (implementation depends on your needs)
+  
+    const { file} = data;
+  
+    try {
+      const response = await axios.post('/api/sendEmail', {
+        file,
+      });
+      console.log(response.data); // Handle successful response (e.g., display success message)
+    } catch (error) {
+      console.error(error);
+      // Handle errors during email sending (e.g., display error message)
+    }
+  }
   return (
     <>
       <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
@@ -183,28 +216,24 @@ const Footer = () => {
                     COT is always on the lookout for talent, submit your
                     resume/CV for us to review.
                   </p>
-                  <form>
-                    <div className="-mx-4 flex">
-                      <div className="px-4">
-                        <div className="">
-                          <button
-                            type="submit"
-                            className="rounded-sm bg-black px-4 py-2 text-base font-medium text-white shadow-submit duration-300 hover:bg-black/90 dark:bg-white/10 dark:shadow-submit-dark dark:hover:bg-white/5"
-                          >
-                            Upload
-                          </button>
-                        </div>
-                      </div>
-                      <div className="w-full px-4">
-                        <button
-                          type="submit"
-                          className="rounded-sm bg-primary px-4 py-2 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
-                        >
-                          Submit
-                        </button>
-                      </div>
-                    </div>
-                  </form>
+                  <form className="space-y-4">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4">
+        <div className="sm:flex-grow">
+          <input
+            type="file"
+            className="w-full sm:w-auto rounded-sm bg-black px-4 py-2 text-base font-medium text-white shadow-submit duration-300 hover:bg-black/90 dark:bg-white/10 dark:shadow-submit-dark dark:hover:bg-white/5"
+          />
+        </div>
+        <div className="mt-2 sm:mt-0">
+          <button
+            type="submit"
+            className="w-full sm:w-auto rounded-sm bg-primary px-4 py-2 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
                   {/* <li>
                     <Link
                       href="/"
