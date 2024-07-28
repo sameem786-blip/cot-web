@@ -6,37 +6,53 @@ import FooterImg from "../../../public/images/footer.png";
 import axios from 'axios';
 
 const Footer = () => {
-  const [formData, setFormData] = useState({ file: ''});
+  const [attachment, setAttachment] = useState(null);
 
-  const handleChange = (event: any) => {
-    setFormData({ ...formData, [event.target.file]: event.target.value });
-  };
-
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-
-    // Call the sendData function with the current formData
-    sendData(formData);
-
-    // Optional: clear the form
-    setFormData({ file: ''});
-  };
-
-  async function sendData(data: { file: string;}) {
-    // This function will be called to send the data (implementation depends on your needs)
-  
-    const { file} = data;
-  
-    try {
-      const response = await axios.post('/api/sendEmail', {
-        file,
-      });
-      console.log(response.data); // Handle successful response (e.g., display success message)
-    } catch (error) {
-      console.error(error);
-      // Handle errors during email sending (e.g., display error message)
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const fileData = event.target.result;
+        setAttachment({
+          name: file.name,
+          type: file.type,
+          data: fileData,
+        });
+      };
+      reader.readAsDataURL(file);
+     };
     }
-  }
+
+     const handleSubmit = async (event) => {
+      event.preventDefault();
+     
+      try {
+        const response = await fetch('/api/sendEmail', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({attachment}),});
+     
+        if (response.ok) {
+          // Handle successful submission
+          setAttachment(null);
+          const fileInput = document.getElementById('file-input'); // Replace 'file-input' with your actual input id
+          fileInput.value = '';
+          console.log('Email sent successfully');
+        } else {
+          // Handle error
+          console.error('Error sending email:', response.statusText);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+     };
+
+  
+
+  
   return (
     <>
       <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
@@ -216,10 +232,10 @@ const Footer = () => {
                     COT is always on the lookout for talent, submit your
                     resume/CV for us to review.
                   </p>
-                  <form className="space-y-4">
+                  <form onSubmit={handleSubmit} className="space-y-4">
       <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4">
         <div className="sm:flex-grow">
-          <input
+          <input onChange={handleFileChange} id='file-input'
             type="file"
             className="w-full sm:w-auto rounded-sm bg-black px-4 py-2 text-base font-medium text-white shadow-submit duration-300 hover:bg-black/90 dark:bg-white/10 dark:shadow-submit-dark dark:hover:bg-white/5"
           />

@@ -4,7 +4,9 @@ import nodemailer from 'nodemailer';
 export async function POST(req){
   try{
 
-    const {name, email, message} = await req.json();
+    const { name, email, message, attachment } = await req.json();
+
+    let mailOptions;
 
     let transporter = await nodemailer.createTransport({
             host: "smtp.gmail.com",
@@ -15,12 +17,15 @@ export async function POST(req){
                 user: process.env.SMTP_EMAIL,
                 pass: process.env.SMTP_PASS,
             },
-        })
+        });
 
-          const info = await transporter.sendMail({
-            from: `sameembbs@gmail.com`, // sender address
-            to: 'sameembbs@gmail.com', // list of receivers
-            subject: 'A ticket has been raised on cot.com.pk', // Subject line
+
+
+        if(!attachment){
+          mailOptions = {
+            from: 'sameembbs@gmail.com',
+            to: 'sameembbs@gmail.com',
+            subject: 'A ticket has been raised on cot.com.pk',
             html: `<html lang="en">
                     <head>
                       <meta charset="UTF-8">
@@ -70,11 +75,37 @@ export async function POST(req){
                         </p>
                       </div>
                     </body>
-                    </html>`, // html body
-                          cc: 'info@cot.com.pk'
-                      });
+                    </html>`,
+                    cc: 'info@cot.com.pk'
+          }
+        }else{
+          mailOptions = {
+            from: 'sameembbs@gmail.com',
+            to: 'sameembbs@gmail.com',
+            subject: 'Resume submission on cot.com.pk',
+            html: `
+              <html>
+                <body>
+                  <h1>New Ticket on Your Website</h1>
+                  <p>A new resume/cv has been submitted on cot.com.pk</p>
+                  <p>**Attachment:** ${attachment.name}</p>
+                </body>
+              </html>
+            `,
+            cc: 'info@cot.com.pk',
+            attachments: [
+              {
+                filename: attachment.name,
+                content: attachment.data, // Base64 or Buffer representation
+                contentType: attachment.type, // e.g., 'application/pdf', 'image/jpeg'
+              },
+            ],
+          }
+        }
 
-                      return NextResponse.json({message: "Email sent successfully"},{status: 200})
+        const info = await transporter.sendMail(mailOptions);
+
+        return NextResponse.json({message: "Email sent successfully"},{status: 200})
   }catch(err){
     return NextResponse.json({message: "Internal Server Error"},{status: 500})
   }
