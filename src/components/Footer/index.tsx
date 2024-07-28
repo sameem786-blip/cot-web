@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import FooterImg from "../../../public/images/footer.png";
-import axios from 'axios';
+import axios from "axios";
 
 const Footer = () => {
   const [attachment, setAttachment] = useState(null);
@@ -21,38 +21,38 @@ const Footer = () => {
         });
       };
       reader.readAsDataURL(file);
-     };
     }
+  };
 
-     const handleSubmit = async (event) => {
-      event.preventDefault();
-     
-      try {
-        const response = await fetch('/api/sendEmail', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({attachment}),});
-     
-        if (response.ok) {
-          // Handle successful submission
-          setAttachment(null);
-          const fileInput = document.getElementById('file-input'); // Replace 'file-input' with your actual input id
-          fileInput.value = '';
-          console.log('Email sent successfully');
-        } else {
-          // Handle error
-          console.error('Error sending email:', response.statusText);
-        }
-      } catch (error) {
-        console.error('Error:', error);
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ attachment }),
+      });
+
+      if (response.ok) {
+        // Handle successful submission
+        setAttachment(null);
+        const fileInput = document.getElementById(
+          "file-input",
+        ) as HTMLInputElement;
+        fileInput.value = "";
+        console.log("Email sent successfully");
+      } else {
+        // Handle error
+        console.error("Error sending email:", response.statusText);
       }
-     };
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
 
-  
-
-  
   return (
     <>
       <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
@@ -233,23 +233,25 @@ const Footer = () => {
                     resume/CV for us to review.
                   </p>
                   <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4">
-        <div className="sm:flex-grow">
-          <input onChange={handleFileChange} id='file-input'
-            type="file"
-            className="w-full sm:w-auto rounded-sm bg-black px-4 py-2 text-base font-medium text-white shadow-submit duration-300 hover:bg-black/90 dark:bg-white/10 dark:shadow-submit-dark dark:hover:bg-white/5"
-          />
-        </div>
-        <div className="mt-2 sm:mt-0">
-          <button
-            type="submit"
-            className="w-full sm:w-auto rounded-sm bg-primary px-4 py-2 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
-          >
-            Submit
-          </button>
-        </div>
-      </div>
-    </form>
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4">
+                      <div className="sm:flex-grow">
+                        <input
+                          onChange={handleFileChange}
+                          id="file-input"
+                          type="file"
+                          className="w-full rounded-sm bg-black px-4 py-2 text-base font-medium text-white shadow-submit duration-300 hover:bg-black/90 dark:bg-white/10 dark:shadow-submit-dark dark:hover:bg-white/5 sm:w-auto"
+                        />
+                      </div>
+                      <div className="mt-2 sm:mt-0">
+                        <button
+                          type="submit"
+                          className="w-full rounded-sm bg-primary px-4 py-2 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark sm:w-auto"
+                        >
+                          Submit
+                        </button>
+                      </div>
+                    </div>
+                  </form>
                   {/* <li>
                     <Link
                       href="/"
