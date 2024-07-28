@@ -1,32 +1,28 @@
-import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
-export async function POST(req){
-  try{
-
+export async function POST(req) {
+  try {
     const { name, email, message, attachment } = await req.json();
 
     let mailOptions;
 
     let transporter = await nodemailer.createTransport({
-            host: "smtp.gmail.com",
-            service: "gmail",
-            port: 587,
-            auth: {
-                // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-                user: process.env.SMTP_EMAIL,
-                pass: process.env.SMTP_PASS,
-            },
-        });
+      host: "mail.cot.com.pk",
+      port: 465,
+      auth: {
+        // TODO: replace `user` and `pass` values from <https://forwardemail.net>
+        user: process.env.SMTP_EMAIL,
+        pass: process.env.SMTP_PASS,
+      },
+    });
 
-
-
-        if(!attachment){
-          mailOptions = {
-            from: 'sameembbs@gmail.com',
-            to: 'sameembbs@gmail.com',
-            subject: 'A ticket has been raised on cot.com.pk',
-            html: `<html lang="en">
+    if (!attachment) {
+      mailOptions = {
+        from: "sameem.abbas@cot.com.pk",
+        to: "sameem.abbas@cot.com.pk",
+        subject: "A ticket has been raised on cot.com.pk",
+        html: `<html lang="en">
                     <head>
                       <meta charset="UTF-8">
                       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -76,14 +72,14 @@ export async function POST(req){
                       </div>
                     </body>
                     </html>`,
-                    cc: 'info@cot.com.pk'
-          }
-        }else{
-          mailOptions = {
-            from: 'sameembbs@gmail.com',
-            to: 'sameembbs@gmail.com',
-            subject: 'Resume submission on cot.com.pk',
-            html: `
+        cc: "info@cot.com.pk",
+      };
+    } else {
+      mailOptions = {
+        from: "sameem.abbas@cot.com.pk",
+        to: "sameem.abbas@cot.com.pk",
+        subject: "Resume submission on cot.com.pk",
+        html: `
               <html>
                 <body>
                   <h1>New Ticket on Your Website</h1>
@@ -92,21 +88,27 @@ export async function POST(req){
                 </body>
               </html>
             `,
-            cc: 'info@cot.com.pk',
-            attachments: [
-              {
-                filename: attachment.name,
-                content: attachment.data, // Base64 or Buffer representation
-                contentType: attachment.type, // e.g., 'application/pdf', 'image/jpeg'
-              },
-            ],
-          }
-        }
+        cc: "info@cot.com.pk",
+        attachments: [
+          {
+            filename: attachment.name,
+            content: attachment.data, // Base64 or Buffer representation
+            contentType: attachment.type, // e.g., 'application/pdf', 'image/jpeg'
+          },
+        ],
+      };
+    }
 
-        const info = await transporter.sendMail(mailOptions);
+    const info = await transporter.sendMail(mailOptions);
 
-        return NextResponse.json({message: "Email sent successfully"},{status: 200})
-  }catch(err){
-    return NextResponse.json({message: "Internal Server Error"},{status: 500})
+    return NextResponse.json(
+      { message: "Email sent successfully" },
+      { status: 200 },
+    );
+  } catch (err) {
+    return NextResponse.json(
+      { message: "Internal Server Error" },
+      { status: 500 },
+    );
   }
 }
