@@ -1,10 +1,16 @@
 "use client";
 import NewsLatterBox from "./NewsLatterBox";
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [btnText, setBtnText] = useState("Submit");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   const handleChange = (event: any) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
@@ -12,113 +18,120 @@ const Contact = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
+    setBtnText("Sending...");
+    setIsSubmitting(true);
 
     // Call the sendData function with the current formData
     sendData(formData);
 
     // Optional: clear the form
-    setFormData({ name: '', email: '', message: '' });
+    setFormData({ name: "", email: "", message: "" });
   };
 
-  async function sendData(data: { name: string; email: string; message: string }) {
+  async function sendData(data: {
+    name: string;
+    email: string;
+    message: string;
+  }) {
     // This function will be called to send the data (implementation depends on your needs)
-  
+
     const { name, email, message } = data;
-  
+
     try {
-      const response = await axios.post('/api/sendEmail', {
+      const response = await axios.post("/api/sendEmail", {
         name,
         email,
         message,
       });
       console.log(response.data); // Handle successful response (e.g., display success message)
+      setBtnText("Sent");
     } catch (error) {
       console.error(error);
+      setBtnText("Failure");
       // Handle errors during email sending (e.g., display error message)
     }
   }
 
+  // export default async function handler(req, res) {
+  //   if (req.method === 'POST') {
+  //     try {
+  //       let testAccount = await nodemailer.createTestAccount();
 
-// export default async function handler(req, res) {
-//   if (req.method === 'POST') {
-//     try {
-//       let testAccount = await nodemailer.createTestAccount();
+  //   let transporter = await nodemailer.createTransport({
+  //       host: "smtp.gmail.com",
+  //       service: "gmail",
+  //       port: 587,
+  //       auth: {
+  //           // TODO: replace `user` and `pass` values from <https://forwardemail.net>
+  //           user: '',
+  //           pass: '',
+  //       },
+  //   })
 
-//   let transporter = await nodemailer.createTransport({
-//       host: "smtp.gmail.com",
-//       service: "gmail",
-//       port: 587,
-//       auth: {
-//           // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-//           user: '',
-//           pass: '',
-//       },
-//   })
+  //   const info = await transporter.sendMail({
+  //       from: `sameembbs@gmail.com`, // sender address
+  //       to: 'sameembbs@gmail.com', // list of receivers
+  //       subject: 'A ticket has been raised on cot.com.pk', // Subject line
+  //       html: `<html lang="en">
+  // <head>
+  //   <meta charset="UTF-8">
+  //   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  //   <title>Ticket Notification</title>
+  //   <style>
+  //     body {
+  //       font-family: Arial, sans-serif;
+  //       margin: 0;
+  //       padding: 0;
+  //       color: #333;
+  //     }
+  //     .container {
+  //       padding: 20px;
+  //       max-width: 600px;
+  //       margin: 0 auto;
+  //       border: 1px solid #ddd;
+  //       border-radius: 4px;
+  //     }
+  //     .header {
+  //       font-size: 20px;
+  //       font-weight: bold;
+  //       margin-bottom: 10px;
+  //     }
+  //     .content {
+  //       line-height: 1.5;
+  //     }
+  //     .footer {
+  //       text-align: center;
+  //       font-size: 12px;
+  //       margin-top: 20px;
+  //     }
+  //   </style>
+  // </head>
+  // <body>
+  //   <div class="container">
+  //     <h1 class="header">New Ticket on Your Website</h1>
+  //     <p class="content">
+  //       A new ticket has been raised on your website by <strong${req.body.name}</strong> (${req.body.email}).
+  //     </p>
+  //     <p class="content">
+  //       **Message:**<br>
+  //       ${req.body.message}
+  //     </p>
+  //     <p class="footer">
+  //       &copy; cot.com.pk] 2024. All rights reserved.
+  //     </p>
+  //   </div>
+  // </body>
+  // </html>`, // html body
+  //       cc: 'info@cot.com.pk'
+  //   });
 
-//   const info = await transporter.sendMail({
-//       from: `sameembbs@gmail.com`, // sender address
-//       to: 'sameembbs@gmail.com', // list of receivers
-//       subject: 'A ticket has been raised on cot.com.pk', // Subject line
-//       html: `<html lang="en">
-// <head>
-//   <meta charset="UTF-8">
-//   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-//   <title>Ticket Notification</title>
-//   <style>
-//     body {
-//       font-family: Arial, sans-serif;
-//       margin: 0;
-//       padding: 0;
-//       color: #333;
-//     }
-//     .container {
-//       padding: 20px;
-//       max-width: 600px;
-//       margin: 0 auto;
-//       border: 1px solid #ddd;
-//       border-radius: 4px;
-//     }
-//     .header {
-//       font-size: 20px;
-//       font-weight: bold;
-//       margin-bottom: 10px;
-//     }
-//     .content {
-//       line-height: 1.5;
-//     }
-//     .footer {
-//       text-align: center;
-//       font-size: 12px;
-//       margin-top: 20px;
-//     }
-//   </style>
-// </head>
-// <body>
-//   <div class="container">
-//     <h1 class="header">New Ticket on Your Website</h1>
-//     <p class="content">
-//       A new ticket has been raised on your website by <strong${req.body.name}</strong> (${req.body.email}).
-//     </p>
-//     <p class="content">
-//       **Message:**<br>
-//       ${req.body.message}
-//     </p>
-//     <p class="footer">
-//       &copy; cot.com.pk] 2024. All rights reserved.
-//     </p>
-//   </div>
-// </body>
-// </html>`, // html body
-//       cc: 'info@cot.com.pk'
-//   });
-  
-//   } catch (err) {
-//       console.log(err)
-//   }
-//   } else {
-//     res.status(405).json({ message: 'Method not allowed!' });
-//   }
-// }
+  //   } catch (err) {
+  //       console.log(err)
+  //   }
+  //   } else {
+  //     res.status(405).json({ message: 'Method not allowed!' });
+  //   }
+  // }
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -135,7 +148,11 @@ const Contact = () => {
               <p className="mb-12 text-base font-medium text-body-color">
                 Our support team will get back to you ASAP via email.
               </p>
-              <form onSubmit={(e) => {handleSubmit(e)}}>
+              <form
+                onSubmit={(e) => {
+                  handleSubmit(e);
+                }}
+              >
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
@@ -192,18 +209,20 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <button type="submit" className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark" >
-                      Submit
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
+                    >
+                      {btnText}
                     </button>
                   </div>
                 </div>
               </form>
             </div>
           </div>
-          
         </div>
       </div>
-      
     </section>
   );
 };
