@@ -10,15 +10,15 @@ const Pricing = () => {
   return (
     <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
-        <SectionTitle
+        {/* <SectionTitle
           title="Simple and Affordable Pricing"
           paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
           center
           width="665px"
-        />
+        /> */}
 
         <div className="w-full">
-          <div className="mb-8 flex justify-center md:mb-12 lg:mb-16">
+          {/* <div className="mb-8 flex justify-center md:mb-12 lg:mb-16">
             <span
               onClick={() => setIsMonthly(true)}
               className={`${
@@ -54,48 +54,97 @@ const Pricing = () => {
             >
               Yearly
             </span>
-          </div>
+          </div> */}
         </div>
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
-            packageName="Lite"
-            price={isMonthly ? "40" : "120"}
+            packageName="Associate"
+            price="Software Engineer"
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Develop and maintain high-quality software solutions, collaborate with cross-functional teams, and contribute to code reviews and testing for innovative projects."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList
+              text="Java, Python, C++, or JavaScript"
+              status="active"
+            />
+            <OfferList
+              text="Software development methodologies"
+              status="active"
+            />
+            <OfferList
+              text="data structures, algorithms, and object-oriented design principles"
+              status="active"
+            />
+            <OfferList
+              text="Git and collaborative development tools"
+              status="active"
+            />
+            <OfferList
+              text="Clean, efficient, and well-documented code, with a focus on best practices"
+              status="active"
+            />
+            <OfferList
+              text="Problem-solving skills, attention to detail, and a collaborative mindset"
+              status="active"
+            />
           </PricingBox>
           <PricingBox
-            packageName="Basic"
-            price={isMonthly ? "399" : "789"}
+            packageName="Associate"
+            price="Cloud Engineer"
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Lead 3D design projects, guide a team of designers, and deliver high-quality visual assets across various platforms."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="AWS, Azure, or Google Cloud" status="active" />
+            <OfferList text="Terraform or CloudFormation" status="active" />
+            <OfferList
+              text="DevOps practices and tools like Docker and Kubernetes"
+              status="active"
+            />
+            <OfferList
+              text="Resource optimization for performance and cost efficiency"
+              status="active"
+            />
+            <OfferList
+              text="Networking / Security / Database"
+              status="active"
+            />
+            <OfferList text="problem-solving skills" status="active" />
+            <OfferList
+              text="collaborative team-oriented mindset"
+              status="active"
+            />
           </PricingBox>
           <PricingBox
-            packageName="Plus"
-            price={isMonthly ? "589" : "999"}
+            packageName="Lead"
+            price="3D Designer"
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Oversee the creative direction and execution of 3D design projects, mentor a team of designers, and ensure the delivery of high-quality visual assets."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="active" />
+            <OfferList
+              text="Modeling / Texturing / Animation"
+              status="active"
+            />
+            <OfferList
+              text="Artistic skills and a keen eye for detail"
+              status="active"
+            />
+            <OfferList
+              text="Proven track record of leading and mentoring"
+              status="active"
+            />
+            <OfferList
+              text="Industry-standard rendering techniques and tools"
+              status="active"
+            />
+            <OfferList
+              text="Conceptualize and execute creative ideas"
+              status="active"
+            />
+            <OfferList
+              text="Meet deadlines in a fast-paced environment"
+              status="active"
+            />
           </PricingBox>
         </div>
       </div>
