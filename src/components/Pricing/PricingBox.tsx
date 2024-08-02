@@ -19,9 +19,16 @@ const PricingBox = (props: {
           </h4>
         </div>
         <p className="mb-7 text-base text-body-color">{subtitle}</p>
+        <p className="mb-7 text-base text-body-color">
+          Please check back for future opportunities. In the meantime, you can
+          submit your resume and portfolio using the form in the footer below.
+          We will keep your information on file and reach out when a suitable
+          position becomes available. Thank you for your interest in joining
+          COT.
+        </p>
 
         <div>{children}</div>
-        <div className="mb-8 border-t border-body-color border-opacity-10 pt-8 dark:border-white dark:border-opacity-10">
+        {/* <div className="mb-8 border-t border-body-color border-opacity-10 pt-8 dark:border-white dark:border-opacity-10">
           <p className="mb-4 text-base font-medium text-body-color">
             Submit Your Resume with the file name as your name.
           </p>
@@ -44,7 +51,7 @@ const PricingBox = (props: {
               </div>
             </div>
           </form>
-        </div>
+        </div> */}
         <div className="absolute bottom-0 right-0 z-[-1]">
           <svg
             width="179"

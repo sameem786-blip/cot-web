@@ -16,7 +16,7 @@ const CareersPage = () => {
     <>
       <Breadcrumb
         pageName="Careers Page"
-        description="For any questions or to learn more about how Computing of Tomorrow (COT) can help your business, please contact us. We're ready to assist with your digital transformation needs."
+        description="At Computing of Tomorrow, we believe in crafting the digital landscape of the future with innovation, dedication, and a passion for excellence. Our team is at the heart of everything we do, driving forward our mission to deliver top-tier IT solutions that transform businesses and inspire growth."
       />
 
       <Pricing />
