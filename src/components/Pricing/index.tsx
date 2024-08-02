@@ -156,7 +156,9 @@ const Pricing = () => {
               price="Not Hiring Currently"
               duration={isMonthly ? "mo" : "yr"}
               subtitle="At Computing of Tomorrow (COT), we are committed to crafting tomorrow’s digital landscape with our exceptional team of professionals. Currently, we do not have any open positions, but we are always interested in connecting with talented individuals who share our vision."
-            ></PricingBox>
+            >
+              <></>
+            </PricingBox>
           </div>
         )}
       </div>
