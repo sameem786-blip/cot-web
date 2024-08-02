@@ -8,7 +8,7 @@ const testimonialData: Testimonial[] = [
     name: "Bilal Khan",
     designation: "Founder @EscrowBridge.pk",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Professional, efficient, and effective. COT exceeded our expectations in every way.",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
@@ -17,7 +17,7 @@ const testimonialData: Testimonial[] = [
     name: "Zainuddin",
     designation: "Founder @VerkPro",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "COT delivered an exceptional web redesign. Our clients love the new look and functionality.",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
@@ -25,7 +25,7 @@ const testimonialData: Testimonial[] = [
 
 const Testimonials = () => {
   return (
-    <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
+    <section className="relative z-10 bg-gray-light py-16 dark:bg-bg-color-dark md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
           title="Customer Experience"
