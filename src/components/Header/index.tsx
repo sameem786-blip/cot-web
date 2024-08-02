@@ -269,6 +269,7 @@ const Header = () => {
                   href="https://www.facebook.com/ComputingOfTomorrow/"
                   aria-label="social-link"
                   target="_blank"
+                  title="facebook"
                   rel="noopener noreferrer"
                   className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                 >
@@ -286,9 +287,10 @@ const Header = () => {
                   </svg>
                 </a>
                 <a
-                  href="https://www.facebook.com/ComputingOfTomorrow/"
+                  href="https://www.instagram.com/cot_pak/"
                   aria-label="social-link"
                   target="_blank"
+                  title="instagram"
                   rel="noopener noreferrer"
                   className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                 >
@@ -324,8 +326,9 @@ const Header = () => {
                     </svg>
                   </a> */}
                 <a
-                  href="https://www.instagram.com/cot_pak/"
+                  href="https://www.linkedin.com/company/100001074/"
                   aria-label="social-link"
+                  title="linkedin"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
@@ -342,6 +345,7 @@ const Header = () => {
                 <a
                   href="mailto:info@cot.com.pk"
                   aria-label="social-link"
+                  title="mailto:info@cot.com.pk"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
