@@ -15,7 +15,7 @@ const CareersPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Careers Page"
+        pageName="Careers"
         description="At Computing of Tomorrow, we believe in crafting the digital landscape of the future with innovation, dedication, and a passion for excellence. Our team is at the heart of everything we do, driving forward our mission to deliver top-tier IT solutions that transform businesses and inspire growth."
       />
 

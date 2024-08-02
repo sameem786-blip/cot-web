@@ -14,12 +14,29 @@ const Contact = () => {
 
   const handleChange = (event: any) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
+    setBtnText("Submit");
   };
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
     setBtnText("Sending...");
     setIsSubmitting(true);
+
+    if (formData.name == "") {
+      setBtnText("Name ?");
+      setIsSubmitting(false);
+      return;
+    }
+    if (formData.email == "") {
+      setBtnText("Email ?");
+      setIsSubmitting(false);
+      return;
+    }
+    if (formData.message == "") {
+      setBtnText("Message ?");
+      setIsSubmitting(false);
+      return;
+    }
 
     // Call the sendData function with the current formData
     sendData(formData);
@@ -44,7 +61,7 @@ const Contact = () => {
         message,
       });
       console.log(response.data); // Handle successful response (e.g., display success message)
-      setBtnText("Sent");
+      setBtnText("Submitted");
     } catch (error) {
       console.error(error);
       setBtnText("Failure");

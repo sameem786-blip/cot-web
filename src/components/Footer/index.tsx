@@ -7,6 +7,8 @@ import axios from "axios";
 
 const Footer = () => {
   const [attachment, setAttachment] = useState(null);
+  const [btnText, setBtnText] = useState("Submit");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
@@ -22,10 +24,19 @@ const Footer = () => {
       };
       reader.readAsDataURL(file);
     }
+    setBtnText("Submit");
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setBtnText("Sending...");
+    setIsSubmitting(true);
+
+    if (!attachment) {
+      setBtnText("attachment ?");
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       const response = await fetch("/api/sendEmail", {
@@ -44,6 +55,7 @@ const Footer = () => {
         ) as HTMLInputElement;
         fileInput.value = "";
         console.log("Email sent successfully");
+        setBtnText("Submitted");
       } else {
         // Handle error
         console.error("Error sending email:", response.statusText);
@@ -245,9 +257,10 @@ const Footer = () => {
                       <div className="mt-2 sm:mt-0">
                         <button
                           type="submit"
+                          disabled={isSubmitting}
                           className="w-full rounded-sm bg-primary px-4 py-2 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark sm:w-auto"
                         >
-                          Submit
+                          {btnText}
                         </button>
                       </div>
                     </div>
