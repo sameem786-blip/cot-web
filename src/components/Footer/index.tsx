@@ -4,11 +4,13 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import FooterImg from "../../../public/images/footer.png";
 import axios from "axios";
+import "./style.css";
 
 const Footer = () => {
   const [attachment, setAttachment] = useState(null);
   const [btnText, setBtnText] = useState("Submit");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
@@ -24,16 +26,13 @@ const Footer = () => {
       };
       reader.readAsDataURL(file);
     }
-    setBtnText("Submit");
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setBtnText("Sending...");
     setIsSubmitting(true);
 
     if (!attachment) {
-      setBtnText("attachment ?");
       setIsSubmitting(false);
       return;
     }
@@ -55,10 +54,15 @@ const Footer = () => {
         ) as HTMLInputElement;
         fileInput.value = "";
         console.log("Email sent successfully");
+        setIsSubmitting(false);
+        setIsSubmitted(true);
         setBtnText("Submitted");
       } else {
         // Handle error
         console.error("Error sending email:", response.statusText);
+        setIsSubmitting(false);
+        setBtnText("Submit");
+        alert("Network Error!");
       }
     } catch (error) {
       console.error("Error:", error);
@@ -255,16 +259,44 @@ const Footer = () => {
                           onChange={handleFileChange}
                           id="file-input"
                           type="file"
+                          required
                           className="w-full rounded-sm bg-black px-4 py-2 text-base font-medium text-white shadow-submit duration-300 hover:bg-black/90 dark:bg-white/10 dark:shadow-submit-dark dark:hover:bg-white/5 sm:w-auto"
                         />
                       </div>
                       <div className="mt-2 sm:mt-0">
                         <button
                           type="submit"
-                          disabled={isSubmitting}
+                          disabled={isSubmitted}
                           className="w-full rounded-sm bg-primary px-4 py-2 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark sm:w-auto"
                         >
-                          {btnText}
+                          {isSubmitting ? (
+                            <div className="loader"></div>
+                          ) : btnText === "Submitted" ? (
+                            <svg width="20" height="20" viewBox="0 0 400 400">
+                              <circle
+                                fill="none"
+                                stroke="#68E534"
+                                stroke-width="20"
+                                cx="200"
+                                cy="200"
+                                r="190"
+                                className="circle"
+                                stroke-linecap="round"
+                                transform="rotate(-90 200 200)"
+                              />
+                              <polyline
+                                fill="none"
+                                stroke="#68E534"
+                                stroke-width="24"
+                                points="100,210 170,270 280,150"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                className="tick"
+                              />
+                            </svg>
+                          ) : (
+                            btnText
+                          )}
                         </button>
                       </div>
                     </div>

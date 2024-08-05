@@ -2,10 +2,12 @@
 import NewsLatterBox from "./NewsLatterBox";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "../Footer/style.css";
 
 const Contact = () => {
   const [btnText, setBtnText] = useState("Submit");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -19,24 +21,7 @@ const Contact = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    setBtnText("Sending...");
     setIsSubmitting(true);
-
-    if (formData.name == "") {
-      setBtnText("Name ?");
-      setIsSubmitting(false);
-      return;
-    }
-    if (formData.email == "") {
-      setBtnText("Email ?");
-      setIsSubmitting(false);
-      return;
-    }
-    if (formData.message == "") {
-      setBtnText("Message ?");
-      setIsSubmitting(false);
-      return;
-    }
 
     // Call the sendData function with the current formData
     sendData(formData);
@@ -61,10 +46,14 @@ const Contact = () => {
         message,
       });
       console.log(response.data); // Handle successful response (e.g., display success message)
+      setIsSubmitting(false);
+      setIsSubmitted(true);
       setBtnText("Submitted");
     } catch (error) {
       console.error(error);
-      setBtnText("Failure");
+      setIsSubmitting(false);
+      setBtnText("Submit");
+      alert("Network Error!");
       // Handle errors during email sending (e.g., display error message)
     }
   }
@@ -183,6 +172,7 @@ const Contact = () => {
                         type="text"
                         placeholder="Enter your name"
                         name="name"
+                        required
                         value={formData.name}
                         onChange={handleChange}
                         className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
@@ -199,6 +189,7 @@ const Contact = () => {
                       </label>
                       <input
                         type="email"
+                        required
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
@@ -218,6 +209,7 @@ const Contact = () => {
                       <textarea
                         name="message"
                         rows={5}
+                        required
                         placeholder="Enter your Message"
                         value={formData.message}
                         onChange={handleChange}
@@ -228,10 +220,37 @@ const Contact = () => {
                   <div className="w-full px-4">
                     <button
                       type="submit"
-                      disabled={isSubmitting}
+                      disabled={isSubmitted}
                       className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
                     >
-                      {btnText}
+                      {isSubmitting ? (
+                        <div className="loader"></div>
+                      ) : btnText === "Submitted" ? (
+                        <svg width="20" height="20" viewBox="0 0 400 400">
+                          <circle
+                            fill="none"
+                            stroke="#68E534"
+                            stroke-width="20"
+                            cx="200"
+                            cy="200"
+                            r="190"
+                            className="circle"
+                            stroke-linecap="round"
+                            transform="rotate(-90 200 200)"
+                          />
+                          <polyline
+                            fill="none"
+                            stroke="#68E534"
+                            stroke-width="24"
+                            points="100,210 170,270 280,150"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            className="tick"
+                          />
+                        </svg>
+                      ) : (
+                        btnText
+                      )}
                     </button>
                   </div>
                 </div>
