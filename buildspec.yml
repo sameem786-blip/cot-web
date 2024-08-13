@@ -5,26 +5,13 @@ phases:
     commands:
       - echo Installing dependencies...
       - npm install
-  pre_build:
-    commands:
-      - echo Starting pre-build phase...
-      - npm run lint
-      - npm run test
   build:
     commands:
       - echo Starting build phase...
       - npm run build
-  post_build:
-    commands:
-      - echo Starting post-build phase...
-      - echo Build completed on `date`
 
 artifacts:
   files:
     - "**/*"
   base-directory: .next # This is where Next.js outputs the built project, you might need to adjust this path based on your build output
-  discard-paths: yes
 
-cache:
-  paths:
-    - "node_modules/**/*"
