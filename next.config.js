@@ -6,9 +6,11 @@ const nextConfig = {
       "localhost",
       "http://cot.com.pk.s3-website-us-east-1.amazonaws.com",
     ],
+    loader: "custom",
+    loaderFile: "./ImageLoader.js",
     remotePatterns: [
       {
-        protocol: "https",
+        protocol: "http",
         hostname: "cdn.sanity.io",
         port: "",
       },
