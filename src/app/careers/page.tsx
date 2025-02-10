@@ -6,8 +6,8 @@ import Pricing from "@/components/Pricing";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Contact Page for Startup Nextjs Template",
+  title: "Careers | Computing of Tomorrow",
+  description: "",
   // other metadata
 };
 

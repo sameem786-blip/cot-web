@@ -5,8 +5,8 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Blog Page for Startup Nextjs Template",
+  title: "Projects | Computing of Tomorrow.",
+  description: "",
   // other metadata
 };
 
@@ -20,13 +20,13 @@ const Blog = () => {
 
       <section className="pb-[120px] pt-[120px]">
         <div className="container">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 md:gap-x-6 lg:gap-x-8">
-          {blogData.map((blog) => (
-            <div key={blog.id} className="w-full">
-              <SingleBlog blog={blog} />
-            </div>
-          ))}
-        </div>
+          <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 md:gap-x-6 lg:gap-x-8">
+            {blogData.map((blog) => (
+              <div key={blog.id} className="w-full">
+                <SingleBlog blog={blog} />
+              </div>
+            ))}
+          </div>
 
           <div className="-mx-4 flex flex-wrap" data-wow-delay=".15s">
             <div className="w-full px-4">
